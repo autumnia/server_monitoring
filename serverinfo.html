@@ -1,0 +1,215 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<META HTTP-EQUIV="refresh" CONTENT="5">
+	
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	
+	<title>Server Monitor</title>
+</head>
+<body>
+	<div class="container">	
+		<div class="row">
+			<div class="col-12" align="center"><h1>Server Monitoring(%)</h1></div> <br/>
+			<div id="timestamp" class="col-12" align="center"></div>
+		</div>
+		
+		<br/><br/>
+		
+		<div class="row" width="100%">
+			<div class="col-3" align="left">서버구분</div>
+			<div class="col-2" align="right">CPU</div>
+			<div class="col-2" align="right">MEM</div>
+			<div class="col-2" align="right">/sw</div>
+			<div class="col-2" align="right">/svc</div>
+		</div>	
+		
+		<hr/>
+		
+		<div class="row">
+			<div class="col-3" align="left">WEB01</div>
+			<div id="lmsecmweb01_cpu" 		class="col-2" align="right"></div>
+			<div id="lmsecmweb01_mem" 		class="col-2" align="right"></div>
+			<div id="lmsecmweb01_sw" 		class="col-2" align="right"></div>
+			<div id="lmsecmweb01_svc" 		class="col-2" align="right"></div>				
+		</div>
+	
+		<div class="row">
+			<div class="col-3" align="left">WEB02</div>
+			<div id="lmsecmweb02_cpu" 		class="col-2" align="right"></div>
+			<div id="lmsecmweb02_mem" 		class="col-2" align="right"></div>
+			<div id="lmsecmweb02_sw" 		class="col-2" align="right"></div>
+			<div id="lmsecmweb02_svc" 		class="col-2" align="right"></div>					
+		</div>
+		<hr/>
+		<div class="row">
+			<div class="col-3" align="left">WAS01</div>
+			<div id="lmsecmwas01_cpu" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas01_mem" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas01_sw" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas01_svc" 		class="col-2" align="right"></div>					
+		</div>		
+
+		<div class="row">
+			<div class="col-3" align="left">WAS02</div>
+			<div id="lmsecmwas02_cpu" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas02_mem" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas02_sw" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas02_svc" 		class="col-2" align="right"></div>						
+		</div>		
+		
+		<div class="row">
+			<div class="col-3" align="left">WAS03</div>
+			<div id="lmsecmwas03_cpu" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas03_mem" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas03_sw" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas03_svc" 		class="col-2" align="right"></div>						
+		</div>				
+		
+		<div class="row">
+			<div class="col-3" align="left">WAS04</div>
+			<div id="lmsecmwas04_cpu" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas04_mem" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas04_sw" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas04_svc" 		class="col-2" align="right"></div>					
+		</div>	
+
+		<div class="row">
+			<div class="col-3" align="left">WAS05</div>
+			<div id="lmsecmwas05_cpu" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas05_mem" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas05_sw" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas05_svc" 		class="col-2" align="right"></div>
+		</div>			
+	
+		<div class="row">
+			<div class="col-3" align="left">WAS06</div>
+			<div id="lmsecmwas06_cpu" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas06_mem" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas06_sw" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas06_svc" 		class="col-2" align="right"></div>
+		</div>	
+
+		<div class="row">
+			<div class="col-3" align="left">WAS07</div>
+			<div id="lmsecmwas07_cpu" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas07_mem" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas07_sw" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas07_svc" 		class="col-2" align="right"></div>
+		</div>	
+
+		<div class="row">
+			<div class="col-3" align="left">WAS08</div>
+			<div id="lmmtrwas03_cpu" 		class="col-2" align="right"></div>
+			<div id="lmmtrwas03_mem" 		class="col-2" align="right"></div>
+			<div id="lmmtrwas03_sw" 		class="col-2" align="right"></div>
+			<div id="lmmtrwas03_svc" 		class="col-2" align="right"></div>
+		</div>			
+		
+		<div class="row">
+			<div class="col-3" align="left">WAS09</div>
+			<div id="lmmtrwas04_cpu" 		class="col-2" align="right"></div>
+			<div id="lmmtrwas04_mem" 		class="col-2" align="right"></div>
+			<div id="lmmtrwas04_sw" 		class="col-2" align="right"></div>
+			<div id="lmmtrwas04_svc" 		class="col-2" align="right"></div>
+		</div>			
+		<hr/>
+		<div class="row" width="100%">
+			<div class="col-3" align="left">NAS</div>
+			<div class="col-3" align="right">/nas_web01</div>
+			<div class="col-3" align="right">/nas_web02</div>
+			<div class="col-3" align="right">/nas_data</div>
+		</div>			
+		<div class="row" width="100%">
+			<div class="col-3" align="left">common</div>
+			<div id="lmsecmweb01_nas_web01" class="col-3" align="right"></div>
+			<div id="lmsecmweb01_nas_web02" class="col-3" align="right"></div>
+			<div id="lmsecmweb01_nas_data" class="col-3" align="right"></div>	
+		</div>					
+	</div>
+	
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>	
+	
+	<script>
+		let today = new Date();   
+		timestamp.innerHTML = today.toLocaleDateString() + ' ' + today.toLocaleTimeString();
+	</script>
+	
+	<script>
+		function checkStatus( key, value, max ) {
+			document.getElementById(key).innerHTML = value;
+		
+			//alert( value.replace('%', '') );
+			if ( parseInt( value.replace('%', '') ) >= max )
+				document.getElementById(key).style.backgroundColor='red';  			    
+		}
+		
+	
+		function readServerFile(file, cpu, mem, sw, svc)
+		{
+			var rawFile = new XMLHttpRequest();
+			rawFile.open("GET", file, false);
+			rawFile.onreadystatechange = function ()
+			{
+				if(rawFile.readyState === 4)
+				{
+					if(rawFile.status === 200 || rawFile.status == 0)
+					{
+						var server_data = rawFile.responseText;
+						server_data = server_data.split(' ');
+						//alert( server_data);
+						
+						checkStatus( cpu, server_data[0], 	"60" );
+						checkStatus( mem, server_data[1], 	"60" );
+						checkStatus( sw, server_data[2], 	"70" );
+						checkStatus( svc, server_data[3], 	"70" );
+					}
+				}
+			}
+			rawFile.send(null);
+		}	
+	
+		function readNasFile(file, nas01, nas02, nas03)
+		{
+			var rawFile = new XMLHttpRequest();
+			rawFile.open("GET", file, false);
+			rawFile.onreadystatechange = function ()
+			{
+				if(rawFile.readyState === 4)
+				{
+					if(rawFile.status === 200 || rawFile.status == 0)
+					{
+						var server_data = rawFile.responseText;
+						server_data = server_data.split(' ');
+						//alert( server_data);
+						
+						checkStatus( nas01, server_data[4], "80" );
+						checkStatus( nas02, server_data[5], "80" );
+						checkStatus( nas03, server_data[6], "80" );					
+					}
+				}
+			}
+			rawFile.send(null);
+		}
+
+		readServerFile("lmsecmweb01.html", "lmsecmweb01_cpu", "lmsecmweb01_mem", "lmsecmweb01_sw", "lmsecmweb01_svc");
+		readServerFile("lmsecmweb02.html", "lmsecmweb02_cpu", "lmsecmweb02_mem", "lmsecmweb02_sw", "lmsecmweb02_svc");
+		readServerFile("lmsecmwas01.html", "lmsecmwas01_cpu", "lmsecmwas01_mem", "lmsecmwas01_sw", "lmsecmwas01_svc");
+		readServerFile("lmsecmwas02.html", "lmsecmwas02_cpu", "lmsecmwas02_mem", "lmsecmwas02_sw", "lmsecmwas02_svc");
+		readServerFile("lmsecmwas03.html", "lmsecmwas03_cpu", "lmsecmwas03_mem", "lmsecmwas03_sw", "lmsecmwas03_svc");
+		readServerFile("lmsecmwas04.html", "lmsecmwas04_cpu", "lmsecmwas04_mem", "lmsecmwas04_sw", "lmsecmwas04_svc");
+		readServerFile("lmsecmwas05.html", "lmsecmwas05_cpu", "lmsecmwas05_mem", "lmsecmwas05_sw", "lmsecmwas05_svc");
+		readServerFile("lmsecmwas06.html", "lmsecmwas06_cpu", "lmsecmwas06_mem", "lmsecmwas06_sw", "lmsecmwas06_svc");
+		readServerFile("lmsecmwas07.html", "lmsecmwas07_cpu", "lmsecmwas07_mem", "lmsecmwas07_sw", "lmsecmwas07_svc");
+		readServerFile("lmmtrwas03.html", "lmmtrwas03_cpu", "lmmtrwas03_mem", "lmmtrwas03_sw", "lmmtrwas03_svc");
+		readServerFile("lmmtrwas04.html", "lmmtrwas04_cpu", "lmmtrwas04_mem", "lmmtrwas04_sw", "lmmtrwas04_svc");
+		
+		readNasFile("lmsecmweb01.html", "lmsecmweb01_nas_web01", "lmsecmweb01_nas_web02", "lmsecmweb01_nas_data");				
+	</script>
+</body>
+</html>
