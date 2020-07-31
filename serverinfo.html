@@ -6,17 +6,60 @@
 	
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	
 	<title>Server Monitor</title>
 </head>
 <body>
 	<div class="container">	
 		<div class="row">
-			<div class="col-12" align="center"><h1>Server Monitoring(%)</h1></div> <br/>
+			<div class="col-12" align="center"><h4>Server Monitoring(%)</h4></div> <br/>
 			<div id="timestamp" class="col-12" align="center"></div>
 		</div>
+		<br/>
+
+		<div class="row" width="100%">
+			<div class="col-3" align="left">NAS</div>
+			<div class="col-3" align="right">/nas_web01</div>
+			<div class="col-3" align="right">/nas_web02</div>
+			<div class="col-3" align="right">/nas_data</div>
+		</div>			
+		<div class="row" width="100%">
+			<div class="col-3" align="left">common</div>
+			<div id="lmsecmweb01_nas_web01" class="col-3" align="right"></div>
+			<div id="lmsecmweb01_nas_web02" class="col-3" align="right"></div>
+			<div id="lmsecmweb01_nas_data" 	class="col-3" align="right"></div>	
+		</div>		
 		
-		<br/><br/>
+		<hr/>
+		<div class="row" >
+			<div class="col-3" align="left">DB</div>
+			<div class="col-2" align="right">CPU</div>
+			<div class="col-2" align="right">MEM</div>
+			<div class="col-2" align="right">/oracle</div>
+			<div class="col-2" align="right">/arch01</div>
+		</div>			
+		<div class="row">
+			<div class="col-3" align="left">DB01</div>
+			<div id="lmsecdb01_cpu" 	class="col-2" align="right"></div>
+			<div id="lmsecdb01_mem" 	class="col-2" align="right"></div>
+			<div id="lmsecdb01_oracle" 	class="col-2" align="right"></div>
+			<div id="lmsecdb01_archive"	class="col-2" align="right"></div>			
+		</div>			
+		<div class="row">
+			<div class="col-3" align="left">DB02</div>
+			<div id="lmsecdb02_cpu" 	class="col-2" align="right"></div>
+			<div id="lmsecdb02_mem" 	class="col-2" align="right"></div>
+			<div id="lmsecdb02_oracle" 	class="col-2" align="right"></div>
+			<div id="lmsecdb02_archive"	class="col-2" align="right"></div>						
+		</div>			
+		<div class="row">
+			<div class="col-3" align="left">DB03</div>
+			<div id="lmsecdb03_cpu" 	class="col-2" align="right"></div>
+			<div id="lmsecdb03_mem" 	class="col-2" align="right"></div>
+			<div id="lmsecdb03_oracle" 	class="col-2" align="right"></div>
+			<div id="lmsecdb03_archive"	class="col-2" align="right"></div>									
+		</div>			
+		
+		<hr/>
 		
 		<div class="row" width="100%">
 			<div class="col-3" align="left">서버구분</div>
@@ -24,9 +67,99 @@
 			<div class="col-2" align="right">MEM</div>
 			<div class="col-2" align="right">/sw</div>
 			<div class="col-2" align="right">/svc</div>
+		</div>		
+		<div class="row">
+			<div class="col-3" align="left">WAS01</div>
+			<div id="lmsecmwas01_cpu" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas01_mem" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas01_sw" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas01_svc" 		class="col-2" align="right"></div>					
+		</div>		
+		<div class="row">
+			<div class="col-3" align="left">WAS02</div>
+			<div id="lmsecmwas02_cpu" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas02_mem" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas02_sw" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas02_svc" 		class="col-2" align="right"></div>						
+		</div>		
+		<div class="row">
+			<div class="col-3" align="left">WAS03</div>
+			<div id="lmsecmwas03_cpu" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas03_mem" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas03_sw" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas03_svc" 		class="col-2" align="right"></div>						
+		</div>				
+		<div class="row">
+			<div class="col-3" align="left">WAS04</div>
+			<div id="lmsecmwas04_cpu" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas04_mem" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas04_sw" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas04_svc" 		class="col-2" align="right"></div>					
 		</div>	
+		<div class="row">
+			<div class="col-3" align="left">WAS05</div>
+			<div id="lmsecmwas05_cpu" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas05_mem" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas05_sw" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas05_svc" 		class="col-2" align="right"></div>
+		</div>			
+		<div class="row">
+			<div class="col-3" align="left">WAS06</div>
+			<div id="lmsecmwas06_cpu" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas06_mem" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas06_sw" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas06_svc" 		class="col-2" align="right"></div>
+		</div>	
+		<div class="row">
+			<div class="col-3" align="left">WAS07</div>
+			<div id="lmsecmwas07_cpu" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas07_mem" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas07_sw" 		class="col-2" align="right"></div>
+			<div id="lmsecmwas07_svc" 		class="col-2" align="right"></div>
+		</div>	
+		<div class="row">
+			<div class="col-3" align="left">WAS08</div>
+			<div id="lmmtrwas03_cpu" 		class="col-2" align="right"></div>
+			<div id="lmmtrwas03_mem" 		class="col-2" align="right"></div>
+			<div id="lmmtrwas03_sw" 		class="col-2" align="right"></div>
+			<div id="lmmtrwas03_svc" 		class="col-2" align="right"></div>
+		</div>			
+		<div class="row">
+			<div class="col-3" align="left">WAS09</div>
+			<div id="lmmtrwas04_cpu" 		class="col-2" align="right"></div>
+			<div id="lmmtrwas04_mem" 		class="col-2" align="right"></div>
+			<div id="lmmtrwas04_sw" 		class="col-2" align="right"></div>
+			<div id="lmmtrwas04_svc" 		class="col-2" align="right"></div>
+		</div>
 		
-		<hr/>
+		<div class="row">
+			<div class="col-3" align="left">WCS01</div>
+			<div id="lmsbosif01_cpu" 	class="col-2" align="right"></div>
+			<div id="lmsbosif01_mem" 	class="col-2" align="right"></div>
+			<div id="lmsbosif01_sw" 	class="col-2" align="right"></div>
+			<div id="lmsbosif01_svc" 	class="col-2" align="right"></div>
+		</div>
+		<div class="row">
+			<div class="col-3" align="left">WCS02</div>
+			<div id="lmsbosif02_cpu" 	class="col-2" align="right"></div>
+			<div id="lmsbosif02_mem" 	class="col-2" align="right"></div>
+			<div id="lmsbosif02_sw" 	class="col-2" align="right"></div>
+			<div id="lmsbosif02_svc" 	class="col-2" align="right"></div>
+		</div>
+		<div class="row">
+			<div class="col-3" align="left">내부배치</div>
+			<div id="lmsecbat01_cpu" 	class="col-2" align="right"></div>
+			<div id="lmsecbat01_mem" 	class="col-2" align="right"></div>
+			<div id="lmsecbat01_sw" 	class="col-2" align="right"></div>
+			<div id="lmsecbat01_svc" 	class="col-2" align="right"></div>
+		</div>		
+		<div class="row">
+			<div class="col-3" align="left">외부배치</div>
+			<div id="lmsbbedi01_cpu" 	class="col-2" align="right"></div>
+			<div id="lmsbbedi01_mem" 	class="col-2" align="right"></div>
+			<div id="lmsbbedi01_sw" 	class="col-2" align="right"></div>
+			<div id="lmsbbedi01_svc" 	class="col-2" align="right"></div>
+		</div>		
 		
 		<div class="row">
 			<div class="col-3" align="left">WEB01</div>
@@ -42,92 +175,54 @@
 			<div id="lmsecmweb02_mem" 		class="col-2" align="right"></div>
 			<div id="lmsecmweb02_sw" 		class="col-2" align="right"></div>
 			<div id="lmsecmweb02_svc" 		class="col-2" align="right"></div>					
-		</div>
-		<hr/>
-		<div class="row">
-			<div class="col-3" align="left">WAS01</div>
-			<div id="lmsecmwas01_cpu" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas01_mem" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas01_sw" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas01_svc" 		class="col-2" align="right"></div>					
-		</div>		
-
-		<div class="row">
-			<div class="col-3" align="left">WAS02</div>
-			<div id="lmsecmwas02_cpu" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas02_mem" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas02_sw" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas02_svc" 		class="col-2" align="right"></div>						
-		</div>		
-		
-		<div class="row">
-			<div class="col-3" align="left">WAS03</div>
-			<div id="lmsecmwas03_cpu" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas03_mem" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas03_sw" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas03_svc" 		class="col-2" align="right"></div>						
 		</div>				
 		
+		<hr/>
 		<div class="row">
-			<div class="col-3" align="left">WAS04</div>
-			<div id="lmsecmwas04_cpu" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas04_mem" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas04_sw" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas04_svc" 		class="col-2" align="right"></div>					
+			<div class="col-3" align="left">BOS01</div>
+			<div id="lmsboap01_cpu" 	class="col-2" align="right"></div>
+			<div id="lmsboap01_mem" 	class="col-2" align="right"></div>
+			<div id="lmsboap01_sw" 		class="col-2" align="right"></div>
+			<div id="lmsboap01_svc" 	class="col-2" align="right"></div>
+		</div>
+		<div class="row">
+			<div class="col-3" align="left">BOS02</div>
+			<div id="lmsboap02_cpu" 	class="col-2" align="right"></div>
+			<div id="lmsboap02_mem" 	class="col-2" align="right"></div>
+			<div id="lmsboap02_sw" 		class="col-2" align="right"></div>
+			<div id="lmsboap02_svc" 	class="col-2" align="right"></div>
+		</div>		
+		<div class="row">
+			<div class="col-3" align="left">BOS03</div>
+			<div id="lmsboap03_cpu" 	class="col-2" align="right"></div>
+			<div id="lmsboap03_mem" 	class="col-2" align="right"></div>
+			<div id="lmsboap03_sw" 	class="col-2" align="right"></div>
+			<div id="lmsboap03_svc" 	class="col-2" align="right"></div>
 		</div>	
-
-		<div class="row">
-			<div class="col-3" align="left">WAS05</div>
-			<div id="lmsecmwas05_cpu" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas05_mem" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas05_sw" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas05_svc" 		class="col-2" align="right"></div>
-		</div>			
-	
-		<div class="row">
-			<div class="col-3" align="left">WAS06</div>
-			<div id="lmsecmwas06_cpu" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas06_mem" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas06_sw" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas06_svc" 		class="col-2" align="right"></div>
-		</div>	
-
-		<div class="row">
-			<div class="col-3" align="left">WAS07</div>
-			<div id="lmsecmwas07_cpu" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas07_mem" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas07_sw" 		class="col-2" align="right"></div>
-			<div id="lmsecmwas07_svc" 		class="col-2" align="right"></div>
-		</div>	
-
-		<div class="row">
-			<div class="col-3" align="left">WAS08</div>
-			<div id="lmmtrwas03_cpu" 		class="col-2" align="right"></div>
-			<div id="lmmtrwas03_mem" 		class="col-2" align="right"></div>
-			<div id="lmmtrwas03_sw" 		class="col-2" align="right"></div>
-			<div id="lmmtrwas03_svc" 		class="col-2" align="right"></div>
-		</div>			
 		
-		<div class="row">
-			<div class="col-3" align="left">WAS09</div>
-			<div id="lmmtrwas04_cpu" 		class="col-2" align="right"></div>
-			<div id="lmmtrwas04_mem" 		class="col-2" align="right"></div>
-			<div id="lmmtrwas04_sw" 		class="col-2" align="right"></div>
-			<div id="lmmtrwas04_svc" 		class="col-2" align="right"></div>
-		</div>			
 		<hr/>
 		<div class="row" width="100%">
-			<div class="col-3" align="left">NAS</div>
-			<div class="col-3" align="right">/nas_web01</div>
-			<div class="col-3" align="right">/nas_web02</div>
-			<div class="col-3" align="right">/nas_data</div>
+			<div class="col-3" align="left">SNAPQ</div>
+			<div class="col-2" align="right">CPU</div>
+			<div class="col-2" align="right">MEM</div>
+			<div class="col-2" align="right">/sw</div>
+			<div class="col-2" align="right">/data</div>
+		</div>	
+		<div class="row">
+			<div class="col-3" align="left">snapq01</div>
+			<div id="lmsqsimg01_cpu" 	class="col-2" align="right"></div>
+			<div id="lmsqsimg01_mem" 	class="col-2" align="right"></div>
+			<div id="lmsqsimg01_sw" 	class="col-2" align="right"></div>
+			<div id="lmsqsimg01_svc" 	class="col-2" align="right"></div>
+		</div>		
+		<div class="row">
+			<div class="col-3" align="left">snapq02</div>
+			<div id="lmsqsimg02_cpu" 	class="col-2" align="right"></div>
+			<div id="lmsqsimg02_mem" 	class="col-2" align="right"></div>
+			<div id="lmsqsimg02_sw" 	class="col-2" align="right"></div>
+			<div id="lmsqsimg02_svc" 	class="col-2" align="right"></div>
 		</div>			
-		<div class="row" width="100%">
-			<div class="col-3" align="left">common</div>
-			<div id="lmsecmweb01_nas_web01" class="col-3" align="right"></div>
-			<div id="lmsecmweb01_nas_web02" class="col-3" align="right"></div>
-			<div id="lmsecmweb01_nas_data" class="col-3" align="right"></div>	
-		</div>					
+					
 	</div>
 	
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -146,7 +241,8 @@
 		
 			//alert( value.replace('%', '') );
 			if ( parseInt( value.replace('%', '') ) >= max )
-				document.getElementById(key).style.backgroundColor='red';  			    
+				document.getElementById(key).style.color='red';  			    
+				//document.getElementById(key).style.backgroundColor='red';  			    
 		}
 		
 	
@@ -173,7 +269,31 @@
 			}
 			rawFile.send(null);
 		}	
-	
+
+		function readDbFile(file, db01, db02, db03, archive)
+		{
+			var rawFile = new XMLHttpRequest();
+			rawFile.open("GET", file, false);
+			rawFile.onreadystatechange = function ()
+			{
+				if(rawFile.readyState === 4)
+				{
+					if(rawFile.status === 200 || rawFile.status == 0)
+					{
+						var server_data = rawFile.responseText;
+						server_data = server_data.split(' ');
+						//alert( server_data);
+						
+						checkStatus( db01, server_data[0], "50" );
+						checkStatus( db02, server_data[1], "50" );
+						checkStatus( db03, server_data[2], "70" );					
+						checkStatus( archive, server_data[3], "70" );					
+					}
+				}
+			}
+			rawFile.send(null);
+		}
+		
 		function readNasFile(file, nas01, nas02, nas03)
 		{
 			var rawFile = new XMLHttpRequest();
@@ -208,6 +328,23 @@
 		readServerFile("lmsecmwas07.html", "lmsecmwas07_cpu", "lmsecmwas07_mem", "lmsecmwas07_sw", "lmsecmwas07_svc");
 		readServerFile("lmmtrwas03.html", "lmmtrwas03_cpu", "lmmtrwas03_mem", "lmmtrwas03_sw", "lmmtrwas03_svc");
 		readServerFile("lmmtrwas04.html", "lmmtrwas04_cpu", "lmmtrwas04_mem", "lmmtrwas04_sw", "lmmtrwas04_svc");
+
+		readServerFile("lmsbosif01.html", "lmsbosif01_cpu", "lmsbosif01_mem", "lmsbosif01_sw", "lmsbosif01_svc");
+		readServerFile("lmsbosif02.html", "lmsbosif02_cpu", "lmsbosif02_mem", "lmsbosif02_sw", "lmsbosif02_svc");
+		
+		readServerFile("lmsecbat01.html", "lmsecbat01_cpu", "lmsecbat01_mem", "lmsecbat01_sw", "lmsecbat01_svc");
+		readServerFile("lmsbbedi01.html", "lmsbbedi01_cpu", "lmsbbedi01_mem", "lmsbbedi01_sw", "lmsbbedi01_svc");
+		
+		readServerFile("lmsboap01.html", "lmsboap01_cpu", "lmsboap01_mem", "lmsboap01_sw", "lmsboap01_svc");
+		readServerFile("lmsboap02.html", "lmsboap02_cpu", "lmsboap02_mem", "lmsboap02_sw", "lmsboap02_svc");
+		readServerFile("lmsboap03.html", "lmsboap03_cpu", "lmsboap03_mem", "lmsboap03_sw", "lmsboap03_svc");
+		
+		readServerFile("lmsqsimg01.html", "lmsqsimg01_cpu", "lmsqsimg01_mem", "lmsqsimg01_sw", "lmsqsimg01_svc");
+		readServerFile("lmsqsimg02.html", "lmsqsimg02_cpu", "lmsqsimg02_mem", "lmsqsimg02_sw", "lmsqsimg02_svc");
+		
+		readDbFile("lmsecdb01.html", "lmsecdb01_cpu", "lmsecdb01_mem", "lmsecdb01_oracle", "lmsecdb01_archive");
+		readDbFile("lmsecdb02.html", "lmsecdb02_cpu", "lmsecdb02_mem", "lmsecdb02_oracle", "lmsecdb02_archive");
+		readDbFile("lmsecdb03.html", "lmsecdb03_cpu", "lmsecdb03_mem", "lmsecdb03_oracle", "lmsecdb03_archive");
 		
 		readNasFile("lmsecmweb01.html", "lmsecmweb01_nas_web01", "lmsecmweb01_nas_web02", "lmsecmweb01_nas_data");				
 	</script>
